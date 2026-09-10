@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sricharanenabothula50-ship-it.github.io/acumen-junior-college/sitemap.xml
