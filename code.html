@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Acumen Junior College</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary": "#ffffff",
+                "on-primary": "#ffffff",
+                "secondary": "#115cb9",
+                "tertiary-fixed-dim": "#ffb597",
+                "surface-dim": "#dad9df",
+                "surface-tint": "#3e5e95",
+                "primary-container": "#002d62",
+                "on-tertiary-fixed": "#360f00",
+                "on-tertiary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#ffdbcd",
+                "primary": "#00193c",
+                "error-container": "#ffdad6",
+                "surface-container": "#eeedf2",
+                "surface-neutral": "#F8FAFC",
+                "achievement-orange": "#F27141",
+                "on-surface": "#1a1b1f",
+                "error": "#ba1a1a",
+                "intellect-gold": "#F2A900",
+                "tertiary-container": "#541d02",
+                "tertiary": "#330e00",
+                "primary-fixed": "#d7e2ff",
+                "on-background": "#1a1b1f",
+                "primary-fixed-dim": "#abc7ff",
+                "on-tertiary-fixed-variant": "#743417",
+                "secondary-fixed": "#d7e2ff",
+                "on-primary-container": "#7796d1",
+                "growth-green": "#7DB741",
+                "surface-variant": "#e3e2e7",
+                "on-secondary-fixed": "#001a40",
+                "inverse-primary": "#abc7ff",
+                "inverse-on-surface": "#f1f0f5",
+                "on-error-container": "#93000a",
+                "on-surface-variant": "#43474f",
+                "surface-bright": "#faf9fe",
+                "outline": "#747781",
+                "on-tertiary-container": "#d4815d",
+                "on-primary-fixed-variant": "#24467c",
+                "heritage-navy": "#001B3A",
+                "on-error": "#ffffff",
+                "outline-variant": "#c4c6d1",
+                "surface": "#faf9fe",
+                "on-secondary-container": "#003370",
+                "on-primary-fixed": "#001b3f",
+                "background": "#faf9fe",
+                "inverse-surface": "#2f3034",
+                "on-secondary-fixed-variant": "#004491",
+                "surface-container-highest": "#e3e2e7",
+                "surface-container-low": "#f4f3f8",
+                "surface-container-high": "#e8e7ed",
+                "secondary-fixed-dim": "#acc7ff",
+                "secondary-container": "#659dfe"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "stack-md": "16px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "container-max": "1280px",
+                "margin-mobile": "16px",
+                "margin-desktop": "48px",
+                "section-padding": "80px",
+                "stack-sm": "8px"
+        },
+        "fontFamily": {
+                "body-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Montserrat"
+                ],
+                "label-lg": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "display-lg-mobile": [
+                        "Montserrat"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ],
+                "label-sm": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "44px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.04em",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top Contact Bar -->
+<div class="bg-heritage-navy text-on-primary py-2 px-margin-mobile md:px-margin-desktop text-center md:text-left flex flex-col md:flex-row md:justify-end gap-4 items-center">
+<span class="flex items-center gap-2 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">mail</span> acumeneduclasses@gmail.com
+        </span>
+<span class="flex items-center gap-2 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">phone</span> +91 7075585772, 9490990022
+        </span>
+</div>
+<!-- Top Navigation Bar -->
+<header class="bg-surface border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20 transition-all duration-200 ease-in-out">
+<!-- Brand -->
+<a class="flex items-center gap-3" href="#">
+<img alt="Acumen Junior College Logo" class="h-12 w-auto object-contain rounded-full shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1X9flqE4Re6fPrZx9iG_XH3AV0cP93bTDsRG3hs-gQYMi1UTCQenadzEBOA90wGewcSTzCd44H1U-SddMdIug-v8-SIpK2ikjBVJePFFfRdoIGaZLb9RMOhoxjSIGMXlUTAZDWtaO4KWX_dlWj9XFWR7QexrUdkBJgZmbuF3CF-_5QDoiwP4zGnmq9VFt-C5hWRW2A_IGh_iaoqZOnIJfPmOs8CA56LBaM93LnmV8G6kN1sPyw-1cToIvVw"/>
+<div class="hidden md:block">
+<h1 class="font-display-lg text-headline-md font-bold text-heritage-navy tracking-tight leading-none">Acumen</h1>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mt-1">Junior College</span>
+</div>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1 transition-colors" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#about">About Us</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#courses">Courses</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#results">Results</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact Us</a>
+<a class="bg-achievement-orange text-on-primary font-label-lg text-label-lg py-2 px-6 rounded-xl shadow-[0_6px_0_0_#c04e22,0_10px_20px_rgba(242,113,65,0.4)] hover:shadow-[0_4px_0_0_#c04e22,0_6px_15px_rgba(242,113,65,0.4)] hover:translate-y-[2px] active:shadow-[0_0px_0_0_#c04e22,0_0px_0px_rgba(242,113,65,0)] active:translate-y-[6px] transition-all duration-150" href="#apply">Apply Now</a>
+</nav>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-surface-neutral overflow-hidden py-16 md:py-32">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-neutral to-surface-container opacity-50"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-heritage-navy">
+                        Unlock Your <span class="text-secondary">Potential</span>. Build a Strong Foundation.
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Acumen Junior College offers the perfect platform for JEE, NEET, and overall academic excellence with a perfect blend of quality education and mentorship.
+                    </p>
+<p class="font-headline-md text-headline-md text-primary-container italic border-l-4 border-achievement-orange pl-4">
+                        "सिद्धिर्भवतु मे सदा"
+                    </p>
+<div class="pt-4 flex gap-4">
+<a class="bg-heritage-navy text-on-primary font-label-lg text-label-lg py-3 px-8 rounded-xl shadow-[0_6px_0_0_#000c1e,0_10px_20px_rgba(0,27,58,0.4)] hover:shadow-[0_4px_0_0_#000c1e,0_6px_15px_rgba(0,27,58,0.4)] hover:translate-y-[2px] active:shadow-[0_0px_0_0_#000c1e,0_0px_0px_rgba(0,27,58,0)] active:translate-y-[6px] transition-all duration-150 inline-flex items-center gap-2" href="#courses">
+                            Explore Courses <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative flex justify-center h-full min-h-[400px]">
+<!-- Using pencil image creatively as a floating element -->
+<img alt="Educational Graphic" class="absolute -right-10 top-1/2 -translate-y-1/2 h-[120%] object-contain drop-shadow-2xl z-0 hidden md:block opacity-90 animate-pulse" src="https://lh3.googleusercontent.com/aida/AEtjO1Xki-NwnOpLXnNSdZhWtTAQBc4DsFEA0TPL7p89rDxTfM0jMc41h46A7YoekSJ81lPMIEV_062UrwzkxIggv3TxaKwzllWC08JSU0BtUsnjF8Cq0if-M3wCtA9QjyyukaPzCEavy4JrCYcy8g_AZmlMaoCX3U8_hH4gBKKfJW1XtuQB6380a-LCyf1gqlyQ7xvXZ7duBA9hA4PUoeNsNy0BTQtxkjkl98cRoHYwqLZvERgAvJBQAiW7SJrB" style="animation-duration: 4s;"/>
+<div class="bg-white rounded-xl shadow-[0_8px_24px_rgba(0,27,58,0.08)] p-6 relative z-10 max-w-sm w-full mx-auto self-center border border-surface-container">
+<img alt="Acumen Logo" class="w-full h-auto object-contain rounded-lg mb-4" src="https://lh3.googleusercontent.com/aida/AEtjO1X9flqE4Re6fPrZx9iG_XH3AV0cP93bTDsRG3hs-gQYMi1UTCQenadzEBOA90wGewcSTzCd44H1U-SddMdIug-v8-SIpK2ikjBVJePFFfRdoIGaZLb9RMOhoxjSIGMXlUTAZDWtaO4KWX_dlWj9XFWR7QexrUdkBJgZmbuF3CF-_5QDoiwP4zGnmq9VFt-C5hWRW2A_IGh_iaoqZOnIJfPmOs8CA56LBaM93LnmV8G6kN1sPyw-1cToIvVw"/>
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-heritage-navy">Academic Excellence</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Empowering minds for future challenges.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="py-section-padding bg-surface" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="font-headline-lg text-headline-lg text-heritage-navy mb-4">Find More <span class="text-secondary">About Us</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                        "The Wonder of teaching is watching caterpillars become butterflies"
+                    </p>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Supportive environment that nurtures ambition and confidence.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Focus on academics, values, and essential life skills.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Modern classrooms, safe campus, and personalized attention.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Whether you're aiming for JEE, NEET, or overall academic excellence, Acumen Junior College offers the right platform to unlock your potential and build a strong foundation for your future.</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-neutral rounded-xl p-8 shadow-[0_4px_20px_rgba(0,27,58,0.04)] border border-surface-container">
+<div class="grid grid-cols-2 gap-6 text-center">
+<div>
+<span class="block font-headline-lg text-headline-lg text-heritage-navy mb-1">100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dedication</span>
+</div>
+<div>
+<span class="block font-headline-lg text-headline-lg text-heritage-navy mb-1">Top</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Results</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Directors & Faculty -->
+<section class="py-section-padding bg-surface-neutral border-y border-outline-variant/30" id="faculty">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-heritage-navy mb-4">Our <span class="text-secondary">Directors</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        With a perfect blend of academic excellence and real-world expertise, our leadership ensures quality education.
+                    </p>
+</div>
+<div class="grid md:grid-cols-2 gap-gutter max-w-4xl mx-auto mb-20">
+<!-- Director 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,27,58,0.04)] border border-surface-container group hover:shadow-[0_8px_24px_rgba(0,27,58,0.08)] transition-all duration-300">
+<div class="h-64 overflow-hidden bg-surface-container-low flex justify-center items-end pt-4">
+<img alt="Mr. Sandeep Mukkala" class="h-full w-auto object-cover object-top group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1U6b3yhtTbWLuFscWejMmqYCkOVWjtYDvShxdxF29brFFMa4CJzd2MieLJJI2yDVhej7tk8xsWy_vyP_DH55ByEk3A0tdX_m3mPUnyhz1Xgb8mUmiKpyPAW3eMP3gUwdli7RPDnN67u9m8F0iF_ah4iDTuR2olFvHh_63rgU-8sMazSethQZc5n8zLg7wCYyMm01P671yheeTmC4eix7MYvvoSsXH7mT7M0uyaArP3ojAfW4H6bpfyS7Pwn"/>
+</div>
+<div class="p-6 text-center border-t border-surface-container">
+<h3 class="font-headline-md text-headline-md text-heritage-navy">Mr. Sandeep Mukkala</h3>
+<p class="font-label-lg text-label-lg text-secondary mb-3">Director</p>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<p>Physics for IIT-JEE</p>
+<p>NIT Warangal, B.Tech</p>
+<p class="text-growth-green font-semibold">AIR-568 (General) - JEE 2005</p>
+</div>
+</div>
+</div>
+<!-- Director 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,27,58,0.04)] border border-surface-container group hover:shadow-[0_8px_24px_rgba(0,27,58,0.08)] transition-all duration-300">
+<div class="h-64 overflow-hidden bg-surface-container-low flex justify-center items-end pt-4">
+<img alt="Dr. R. Shravan Kumar" class="h-full w-auto object-cover object-top group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UF_u7Mjg2UZ-6jw8te9o2edESvY9DKAvl20PRkk5FQD8eetckLMFQpo-yh9lvTSBlV-Y5MwbPudI2ZXBMU-tnrsUfAe0k_zuF3vBBPw5csjUZZZ02WZf3tH0n5jnWrUHNmYkMQYk3XFt0tylRDhJaRI2CppCAzmnxN6js4rJkWK59MQBAVgCiBBUaKIn-t3uYWxovmrOAtw2gYFwIimriNQNqCdtr7CVblbO_L0CWWLZpJiaymguLBIoea"/>
+</div>
+<div class="p-6 text-center border-t border-surface-container">
+<h3 class="font-headline-md text-headline-md text-heritage-navy">Dr. R. Shravan Kumar</h3>
+<p class="font-label-lg text-label-lg text-secondary mb-3">Director</p>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<p>Zoology (BiPC)</p>
+<p>MBBS (Kakatiya Medical College)</p>
+<p>M.S. (Gandhi Medical College)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mb-10">
+<h2 class="font-headline-lg text-headline-lg text-heritage-navy">Our <span class="text-secondary">Faculty</span></h2>
+</div>
+<div class="grid md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
+<!-- Faculty 1 -->
+<div class="bg-white rounded-xl p-6 shadow-[0_4px_20px_rgba(0,27,58,0.04)] border border-surface-container flex flex-col md:flex-row gap-4 items-center md:items-start text-center md:text-left">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[32px]">calculate</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-heritage-navy">Mr. Koneti Sreenivasulu</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Subject: Mathematics</p>
+<p class="font-body-md text-body-md text-on-surface">IIT Bombay CSE</p>
+<p class="font-body-md text-body-md text-growth-green font-semibold">AIR-34</p>
+</div>
+</div>
+<!-- Faculty 2 -->
+<div class="bg-white rounded-xl p-6 shadow-[0_4px_20px_rgba(0,27,58,0.04)] border border-surface-container flex flex-col md:flex-row gap-4 items-center md:items-start text-center md:text-left">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[32px]">science</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-heritage-navy">Mr. Sudhakar</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Subject: Chemistry</p>
+<p class="font-body-md text-body-md text-on-surface">IIT Bombay</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Courses -->
+<section class="py-section-padding bg-surface" id="courses">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-heritage-navy"><span class="text-secondary">Courses</span> Offered</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<div class="bg-surface-neutral border border-surface-container rounded-xl p-6 text-center hover:bg-primary-fixed transition-colors group shadow-sm">
+<span class="material-symbols-outlined text-4xl text-secondary mb-3 group-hover:scale-110 transition-transform">school</span>
+<h4 class="font-label-lg text-label-lg text-heritage-navy">IIT-JEE (MAINS)</h4>
+</div>
+<div class="bg-surface-neutral border border-surface-container rounded-xl p-6 text-center hover:bg-primary-fixed transition-colors group shadow-sm">
+<span class="material-symbols-outlined text-4xl text-secondary mb-3 group-hover:scale-110 transition-transform">military_tech</span>
+<h4 class="font-label-lg text-label-lg text-heritage-navy">IIT-JEE (ADV)</h4>
+</div>
+<div class="bg-surface-neutral border border-surface-container rounded-xl p-6 text-center hover:bg-primary-fixed transition-colors group shadow-sm">
+<span class="material-symbols-outlined text-4xl text-secondary mb-3 group-hover:scale-110 transition-transform">health_and_safety</span>
+<h4 class="font-label-lg text-label-lg text-heritage-navy">NEET</h4>
+</div>
+<div class="bg-surface-neutral border border-surface-container rounded-xl p-6 text-center hover:bg-primary-fixed transition-colors group shadow-sm">
+<span class="material-symbols-outlined text-4xl text-secondary mb-3 group-hover:scale-110 transition-transform">workspace_premium</span>
+<h4 class="font-label-lg text-label-lg text-heritage-navy">OLYMPIAD</h4>
+</div>
+<div class="bg-surface-neutral border border-surface-container rounded-xl p-6 text-center hover:bg-primary-fixed transition-colors group shadow-sm col-span-2 md:col-span-1">
+<span class="material-symbols-outlined text-4xl text-secondary mb-3 group-hover:scale-110 transition-transform">book</span>
+<h4 class="font-label-lg text-label-lg text-heritage-navy">BITSAT / EAPCET</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Results Section -->
+<section class="py-section-padding bg-heritage-navy text-on-primary" id="results">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-4">Our <span class="text-inverse-primary">Results</span></h2>
+<p class="font-body-lg text-body-lg text-on-primary/80">Celebrating the success of our dedicated students.</p>
+</div>
+<!-- Main Results Poster -->
+<div class="mb-16">
+<img alt="Acumen Results Highlights 2022-2024" class="w-full h-auto rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1W6Ou1ZhmqY5U_Nh1tTYC31VAMKukTTvKWOpBvO3w1ph0vsbVawcxvEhnOmCWc10D-wReUQXften0Km4Brtemezo8wkXr8PTmQwfDEVXyEQWOq4f7jzrCIuiTDR95fr8JbQms1NAmqPgSnC_dZxlQnx8cK_PxxPg3mktXyjD-PyGb6TbmPyri30c_FjimwMRSkP7C4GIZevyL53e3_FxPabdz7P9M0EW6vaMrANmgdFKD7Qi0Fq_47OvozJ"/>
+</div>
+<!-- Highlight Cards -->
+<div class="grid md:grid-cols-2 gap-gutter">
+<div class="bg-surface/10 border border-on-primary/20 rounded-xl overflow-hidden backdrop-blur-sm">
+<img alt="Student Highlight - Abhinav" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UIDROfAfVc1CkLX3Rgiok1jmq9ylJthMSuHO7heSA4CqfHLmY0hxeIpZScsSkpbXW_MuOgx89sKq3HAdUyn4GMoGGMmiOrP6lDBb4-OI-GrvhRkvEz0biJx0Ew62EpIjQ-BXBr41Al0ZYqYikOf0z7L_Ja762nq4Qxem2i-1cgbqz5EIZ-xsxwahrZyaUj3ooj0vfRLNdMSzu4yugeUx5UBCy5txr-FMofAaP5Z3hhhRrdwqGPlzdmpnZD"/>
+<div class="p-6 text-center bg-primary-container/80">
+<p class="font-label-lg text-label-lg text-inverse-primary">Outstanding Performance</p>
+</div>
+</div>
+<div class="bg-surface/10 border border-on-primary/20 rounded-xl overflow-hidden backdrop-blur-sm">
+<img alt="Student Highlight - Sreeja" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VTVIbA3sGCHcGfK-VTgIcUT9twyC5GxefpsKN2uowx8F7AaP5HP701yMmwxzGejzFORq4D8GMJ7RcYJFUgj3kJMTvoBpLKAlRTDZnSdfhj-5Njkvdjt2xacnxb1BAQTXrSUX64RszxVPZZWFd4vIg0VTrWZzcJuLmWNkgMFWek5n_U5ycGbgk_G58LCr6VVXloq2K3nOXWO9a0h0b5X7AfpzplFo7QaIGe5ZOHDxcDz0RD1WCGeIjF93cZ"/>
+<div class="p-6 text-center bg-primary-container/80">
+<p class="font-label-lg text-label-lg text-inverse-primary">Top Rank Achiever</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface flat no shadows" id="contact">
+<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto flex flex-col lg:flex-row justify-between gap-12">
+<!-- Brand & Address -->
+<div class="max-w-xl space-y-4">
+<h2 class="font-display-lg text-headline-md text-on-primary dark:text-on-surface font-bold tracking-tight">Acumen <span class="font-label-sm text-label-sm block uppercase tracking-widest text-on-primary/80 mt-1">Junior College</span></h2>
+<div class="font-body-md text-body-md text-on-primary/80 dark:text-on-surface/80 space-y-2 mt-6">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] mt-1 shrink-0">location_on</span>
+<span>Ambedkar Bhavan Road, Near Pochamma Temple, Vidyanagar, Hanumakonda-506001.</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] shrink-0">mail</span>
+<span>acumeneduclasses@gmail.com</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] shrink-0">phone</span>
+<span>+91 7075585772, 9490990022</span>
+</p>
+</div>
+<div class="space-y-6 mt-6"><div class="w-full h-64 rounded-xl overflow-hidden shadow-lg border-2 border-on-primary/10 bg-surface-container-low"><iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.344444444444!2d79.5666666!3d18.0166667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f9999999999%3A0x9999999999999999!2sAcumen%20Junior%20College!5e0!3m2!1sen!2sin!4v1715850000000!5m2!1sen!2sin" style="border:0;" width="100%"></iframe></div><div class="flex items-center gap-4 p-4 bg-on-primary/5 rounded-xl border border-on-primary/10"><img alt="Campus Visualization" class="w-24 h-24 rounded-lg object-cover shadow-sm shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdSgWrnAfW1ht_aHi2nlmzu90w2pgYU3v0eqcYn9CnkcyMd623lwM5uVOhW9AxsBHwESqsRZhlIRrrukunalA_T6JjP0pY3RFT0iUSM-xtHy_d2p1ghgiC8lmr2P8bzdHDmiFV54dDNGL6hsS3hbX6MWjADtjVIP6Rb9ti2MbZPYGBhKDJqavGblQ1dLioYDcaklAMLCfpijxUKQWrFt8DVeSb-cqXNQrhiwvUSWcYSBj_rKy7T2CtGg"/><div class="space-y-1"><p class="font-label-lg text-label-lg text-on-primary">Campus View</p><p class="font-label-sm text-label-sm text-on-primary/60">Modern infrastructure designed for academic excellence.</p></div></div></div>
+</div>
+<!-- Links -->
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-primary dark:text-on-surface">Quick Links</h3>
+<nav class="flex flex-col space-y-2 font-body-md text-body-md text-on-primary/80 dark:text-on-surface/80">
+<a class="hover:text-achievement-orange transition-colors duration-150 ease-linear" href="#">Home</a>
+<a class="hover:text-achievement-orange transition-colors duration-150 ease-linear" href="#about">About Us</a>
+<a class="hover:text-achievement-orange transition-colors duration-150 ease-linear" href="#courses">Courses</a>
+<a class="hover:text-achievement-orange transition-colors duration-150 ease-linear" href="#results">Results</a>
+</nav>
+</div>
+<!-- JSON Links -->
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-primary dark:text-on-surface">Institution</h3>
+<nav class="flex flex-col space-y-2 font-body-md text-body-md text-on-primary/80 dark:text-on-surface/80">
+<a class="hover:text-achievement-orange transition-colors duration-150 ease-linear" href="#">Privacy Policy</a>
+<a class="hover:text-achievement-orange transition-colors duration-150 ease-linear" href="#">Terms of Service</a>
+<a class="text-achievement-orange font-bold hover:text-achievement-orange transition-colors duration-150 ease-linear" href="#">Hanumakonda Campus</a>
+<a class="hover:text-achievement-orange transition-colors duration-150 ease-linear" href="#">Faculty Portal</a>
+</nav>
+</div>
+</div>
+<div class="border-t border-on-primary/10 dark:border-outline/10 text-center py-6 font-label-sm text-label-sm text-on-primary/60 dark:text-on-surface/60">
+<p>© 2024 Acumen Junior College. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
